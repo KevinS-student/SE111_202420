@@ -3,95 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Kevin Skelly" >
-    <meta name="description" content="W2 Demo" >
-    
-    <title>W2 | Bio</title>
-    <!--in-document-styling-->
-    <style>
-        /*for CSS styling of all page content*/
-        /* selecttor {
-            propery:value;
-            */
-        div{/*this applyes to all divs in the page*/
-        border:1px solid black;
-        margin:10px;/*space outside of border*/
-        padding:10px;/*space between content and border interior*/
-         }
-          #bio {/* applies to the element with an id value of bio*/
-          border:2px solid red;
-          }
-          .bg {
-            background-color:black;
-            color:white;
-          }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="This is a Week 2 Assignment">
+    <!--Change the author to your name-->
+    <meta name="author" content="You're name goes here">
+    <title>Week 2 | Home</title>
 </head>
 <body>
-<!--the content of the page lives -everything we "see"-->
-<div id="wrapper">
-    <h1 style="border:1px solid blue">Week 2 - Demo</h1>
-    <h2>attributes, <b>images</b>, <i>links</i> </h2>
-    <!--NAV BAR-->
-    <div id="nav">
-
-        <!--<a> is for linking both external and internal-->
-    <a href="https://www.meca.edu" target="_blank">Visit MECA!</a>   <!--External Link-->
-
-    <br>
-
-    <a href="text.txt">Page 2 </a>  <!--Internal Link-->
-
-    <!--Internal Jump links-->
-    <a href ="#bio">Bio</a>
-    <a href ="#schools">Schools</a>
-    <a href ="#hobby">Hobbies</a>
-
-    <br>
-    <a href ="#footer">Bottom Of Page</a>
-    </div>
-
-    <div id = "bio">
-    <!--BIO SECTION-->
-    <h2 class="bg"></h2class>Bio - About Me</h2>
-
-    Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.
-    A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. 
-    You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> 
-    between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.
-    </div>
-
-
-    <div id = "schools">
-
-    <!--SCHOOLS SECTION-->
-    <h2>Schools</h2>
-
-    <!--List of schools-->
-    <ol class="bg"></ol>>
-        <li>NEIT</li>
-        <li>Hendrick Hudson High School</li>
-        <li>Blue Mountain Middle School</li>
-        <li>Frank G Lindsey Elementry School</li>
-    </ol>
-    <!--"external" images use absolute paths "not good"-->
-    <img src="images/meca.jpg" alt="the meca building at sundown" width="500">
-    </div>
-
-    <div id = hobby>
-        <h2>Hobbies</h2>
-        <ul>
-
-            <li>Video Games</li>
-            <li>Wrestling</li>
-
-        </ul>
-    <!--HOBBY SECTION-->
-    </div>
-    <div id="footer" class="bg">
-    <p>&copy; 2024, Kevin Skelly | SE111 | 202420</p>
-    <a href=""
-    </div>
-</div>
+    <!--INSTRUCTIONS-->
+    <!--
+        Using relative paths, change the URLs or URIs in the index and characters pages project to allow the images and links to load correctly.
+    -->
+    <main>
+        <header>
+            <img src="neit_logo.png" alt="NEIT Logo">
+        </header>
+        <hr>
+        <nav>
+            <a href="index.html">HOME</a> | <a href="characters page.html">CHARACTERS</a>
+        </nav>
+        <hr>
+        <section>
+            <!--link to an image with an absolute path-->
+            <img src="https://www.nicepng.com/png/detail/123-1234378_lucky-charms-leprechaun-png-lucky-charms-clip-art.png" alt="Lucky the Leprechaun">
+            <img src="mrt.webp" alt="Mr T">
+        </section>
+        <hr>
+        <footer>
+            <img src="neit-tiger.png" alt="NEIT Tiger Mascot">
+        </footer>
+    </main>
 </body>
 </html>
