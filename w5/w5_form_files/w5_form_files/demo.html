@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Skelly">
+    <meta name="description" content="w5-Demo">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Week 5 | Tables and Forms</title>
+
+    <style>
+
+        table, td{
+            border:1px solid black;
+        }
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <!--Build your Table and Form here-->
+    <h1> W5 Demo Table</h1>
+
+    <form method="GET" action="">
+
+       <table>
+
+        <thead> <!--Table Head = Column Header (Not Required)-->
+            <!--new row-->
+           <tr>
+
+            <!--left column (labels)-->
+            <td>
+                <h2>Labels</h2>
+
+            </td>
+
+            <!--right column (inputs)-->
+            <td>
+                <h2>Inputs</h2>
+
+            </td>
+
+           </tr>
+        </thead>
+
+        <tbody>
+          <tr> <!--First Name-->
+            <td>
+                <label for="firstname">First Name:</label>
+               
+             </td>
+
+             <td> <input type="text" name="firstname" id="firstname" placeholder="firstname">
+
+             </td>
+
+          </tr>
+
+             <br>
+
+          <tr><!--Last Name-->
+
+             <td>
+
+             <label for="lastname">Last Name:</label>
+             
+             </td>
+
+             <td>
+                <input type="text" name="lastname" id="lastname" placeholder="lastname">
+            </td>
+             
+         </tr>
+
+            <br>
+
+         <tr><!--AGE-->
+         <td>
+             <label for="age"> Age: </label>
+             
+         </td>
+
+         <td>
+            <input type="number" name="age" id="age" min="0" placeholder="0">
+        </td>
+       </tr>
+           
+           <tr><!--Email-->
+
+            <!--left column (labels)-->
+            <td>
+                <label for="email">Email:</label>
+
+            </td>
+
+            <!--right column (inputs)-->
+            <td>
+                <input type="email" name="email" id="email" maxlength="25"
+                placeholder="email@email.com">
+
+            </td>
+
+           </tr>
+           <br>
+
+           <tr> <!--Comments-->
+
+            <td>
+
+                <label for="comments">Comments:</label>
+
+            </td>
+
+            <td>
+
+                <textarea name="comments" id="comments" placeholder="Leave Your Comments Here"></textarea>
+
+            </td>
+
+
+
+
+
+           </tr>
+
+
+           <tr><!--Favorite Color-->
+
+            <!--left column (labels)-->
+            <td>
+                <label for="favorite color">Pick your Favorite Color:</label>
+
+            </td>
+
+            <!--right column (inputs)-->
+            <td>
+                <select name="favecolor" id="favecolor">
+
+                    <option value="r">Red</option>
+                    <option value="b">Blue</option>
+                    <option value="g">Green</option>
+
+                </select>
+
+            </td>
+
+           </tr>
+
+           <tr> <!--Radio Buttons-->
+
+            <!--left column (labels)-->
+            <td>
+               
+                <label for="study">Program of Study:</label>
+
+            </td>
+
+            <!--right column (inputs)-->
+            <td>
+                
+                <input type="radio" name="study" id="study1" value="SE">Software Engineering
+
+                <br>
+
+                <input type="radio" name="study" id="study2" value="WD">
+                Web Development
+
+                <br>
+
+                <input type="radio" name="study" id="study3" value="NE">
+                Cybersecurity & Networking
+            </td>
+
+           </tr>
+
+           <tr><!--Check Boxes-->
+
+            <!--left column (labels)-->
+            <td>
+                <label>Select Your Vehicle(s):</label>
+
+            </td>
+
+            <!--right column (inputs)-->
+            <td>
+                <input type="checkbox" name="vehicle1" id="vehicle1"  value="car">
+                <label for="vehicle1">Car</label>
+                <br>
+                <input type="checkbox" name="vehicle2"  id="vehicle2" value="Motorcycle" >
+                <label for="vehicle2">Motorcycle</label>
+                <br>
+                <input type="checkbox" name="vehicle3" id="vehicle3"  value="Truck" >
+                <label for="vehicle3">Truck</label>
+
+            </td>
+
+           </tr>
+
+           <tr> <!--Date-->
+
+            <!--left column (labels)-->
+            <td>
+                <label for="date">Date</label>
+
+            </td>
+
+            <!--right column (inputs)-->
+            <td>
+                <input type="date" name="date" id="date" required>
+
+            </td>
+
+           </tr>
+
+
+           <tr><!--Submit-->
+            
+            <!--left column (labels)-->
+            <td>
+                
+
+            </td>
+
+            <!--right column (inputs)-->
+            <td>
+               
+                <input type="submit" value="SUBMIT">
+
+            </td>
+
+           </tr>
+
+
+
+
+
+
+
+        </tbody>
+
+        </table>
+
+    </form>
+    
+</body>
+</html>
