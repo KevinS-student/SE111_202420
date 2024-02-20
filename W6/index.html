@@ -10,5 +10,47 @@
 </head>
 <body>
     
+<script>
+
+var pay = prompt( "What is your hourly pay?")
+var hours = prompt("how many hours do you work a week")
+pay = Number(pay)
+console.log(`the pay is ${pay}`)
+hours = Number(hours)
+console.log(`the hours are ${hours}`)
+var tax = .2
+var gross = pay * hours
+console.log(`gross pay is ${gross}`)
+var sams = gross * tax
+console.log(`sams share is ${sams}`)
+var net = gross - sams
+console.log(`net pay is ${net}`)
+
+let grossf = gross.toFixed(2);
+
+let netf = net.toFixed(2);
+
+let samsf = sams.toFixed(2);
+
+alert(`your gross pay is ${grossf}`)
+alert(`your net pay is ${netf}`)
+alert( `uncle sams share ${samsf}`)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
