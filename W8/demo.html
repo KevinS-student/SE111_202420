@@ -210,16 +210,6 @@
         //-------ARRAYS--------------------
         //-------create a new array of names and populate it!
 
-        //-------PARALLEL ARRAYS-----------
-        //-------Building a parallel array to people array that holds fave animals
-
-        //-------ASSOCIATIVE ARRAYS---------
-
-
-        //-------OBJECTS--------------------
-
-        //-------ARRAYS POPULATED WITH OBJECTS----------
-
         var people = [
             "Katie",
             "Marty",
@@ -236,7 +226,162 @@
         people.push(`Jim`)        //.append() in Python adds value to end of list
         console.log(`the people array has: ${people.length} values\n${people}`)
 
+
+        //-------PARALLEL ARRAYS-----------
+        //-------Building a parallel array to people array that holds fave animals
+        var faveAnimal = [
+            "elephant",
+            'dog',
+            'bird',
+            'jaguar',
+            'panda bear',
+            'meerkat',
+            'giraffe',
+            'duck'
+        ]
+
+        //Processing arrays use a standard for loop to batch process (do the same thing to every value in the array)
+
+        for(let index = 0; index < people.length; index++)
+        {
+            //block scope: uses the let declarative; the variable name is only accessible within the code block
+            //index++ - post-incrementation, adds 1 to index after each loop iteration
+            console.log(`${people[index]}'s fave is a: ${faveAnimal[index]}`)
+
+        }//Batch proccess of parallel arrays for loop
+
+        //-------ASSOCIATIVE ARRAYS---------
+        //Arrays with string index instead of integer index
+        // Developer must hand populate each string index with a unique string key
+
+            var classTime = []
+
+            classTime[`early`] = `7:45A`
+            classTime[`better`] = `11:25A`
+            classTime[`afternoon`] = `3:05P`
+            classTime[`late`] = `5:45P`
+
+            //for in loops are best used for associative arrays and other string-based keys like properties in objects
+
+            for (let key in classTime)
+
+            console.log(`Class Times - ${key}: ${classTime[key]}`)
+
+        //-------OBJECTS--------------------
+
+        //create a pet1 object - we will resue the base to create several objects
+        var pet1 = {
+            title: `Sir, Captain`,
+            first: `Jackson Daniel`,
+            middle: `Mellow`,
+            last: `Truchon`,
+            suffix: `First of His Name`,
+            age: 13,
+            hasSiblings: true,
+            numSiblings: 2,
+            faveToy: `KT's plants`,
+
+            infoAlert: function() {
+                alert(`
+                ${this.title}  ${this.first} ${this.middle} ${this.last} ${this.suffix}    
+
+                `)
+            },
+
+            nameSiblings:["George", "Marlowe"]
+
+        }
+
+        console.log(pet1)
+
+        console.log(pet1.first)
+
+        console.log(pet1.nameSiblings.length)
+
+        pet1.newProperty = 'Jack'
+        
+        pet1.infoAlert()
+
+        //-------ARRAYS POPULATED WITH OBJECTS----------
+
+
+        //create an empty array
+        var pets = []
+        //add objects to the array - there are 3 ways we have covered
+        pets.push(pet1)
+
+       console.log(pets)
+
         //[PART 3]-PUTTING IT ALL TOGETHER---------------------------------------------
+
+        submit.addEventListener(`click`,writeCharacter)
+
+        
+
+        function writeCharacter(event){
+
+            var player = pName.value
+            var playClass = pClass.value
+            var playLevel = pLevel.value
+            console.log(player, playClass, playLevel)
+
+            if(playLevel >= 5)
+            {
+                var bonus = `+500 Gold`
+            }
+            else
+            {
+                var bonus = ` No Bonus yet`
+            }
+
+
+            var newPlayer = {
+                playerName: player,
+                playerClass: playClass,
+                playerLevel: playLevel,
+                bonus: bonus
+            }
+            console.log(newPlayer)
+
+
+            var charInfo = ``
+
+            charInfo.push(newPlayer)
+
+            console.log(charInfo)
+
+            var resultContent = ``
+            
+            for(let i = 0; i < charInfo.length; i++)
+            {
+
+
+                for(let key in charInfo[i])
+                {
+
+                  resultContent += `<p><b>${key.toUpperCase()}</b>: ${charInfo[i][key]}</p>`
+
+                }
+
+             resultContent += `<hr>` 
+
+             resultBox.innerHTML += resultContent
+
+            }
+            resultBox.innerHTML = resultContent
+
+        }//writeCharacter
+       
+
+
+
+
+
+
+
+
+
+
     </script>
 
 </body>

@@ -34,15 +34,23 @@
 	<!--The script tag should go after the HMTL, but inside of the body.-->
 	<!--JavaScript cannot find tags, if they are not parsed before the script runs-->
     <script>
-	
-		//Store the elements (tags) in variables
 		
+		//Store the elements (tags) in variables
+		var fName = document.querySelector(`#first`)
+		
+		var lName = document.querySelector(`#last`)
 
+		var button = document.querySelector(`#button`)
+
+		var output = document.querySelector(`#output`)
+		
 		//Make an array to store the people
+		var people = []
+			
 		
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
+		button.addEventListener(`click`,calcAndDisplay)
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -65,19 +73,22 @@
 			//Add the following properties:
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
-
+				var first = fName.value
+				var last = lName.value
             var person = {
+				   first,
+			       last
 
 
 
             }//end of person object
-
+			
 
 
 
 			//Add the person object into the people array by using the .push() array method.
+			people.push(person)
 			
-
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
 			{
@@ -96,10 +107,10 @@
 			
 
 			//create a variable called 'output' that has an empty string value stored to 
-			
+			output = ``
 
 			//Loop through the objects in the people array
-			for()
+			for(let i = 0; i < people.length; i++)
             {
 
 				//Loop through each property in the object
@@ -109,18 +120,19 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
+					output += `${first.toUpperCase()} ${last.toUpperCase()}`
 				
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
+				output += `<hr>`
 
 
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
-				
+				console.log(output)
 
 
 
