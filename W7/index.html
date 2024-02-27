@@ -176,10 +176,10 @@
         var fname = document.querySelector(`#first`).value  
         var lname = document.querySelector(`#last`).value
         var full = fname + ` ` + lname
-        var grossPay = rate.value + hours.value
+        var grossPay = (rate.value * hours.value).toFixed(2)
         var tax =.2
-        var taxAmount = (grossPay * tax)
-        var netPay = (grossPay - taxAmount)
+        var taxAmount = (grossPay * tax).toFixed(2)
+        var netPay = (grossPay - taxAmount).toFixed(2)
         console.log(full)
         console.log(grossPay)
         console.log(taxAmount)
@@ -201,12 +201,12 @@
         var fname = document.querySelector(`#first`).value  
         var lname = document.querySelector(`#last`).value
         var full = fname + ` ` + lname
-        var grossPay = rate.value + hours.value
+        var grossPay = (rate.value * hours.value).toFixed(2)
         var tax =.2
-        var taxAmount = (grossPay * tax)
-        var netPay = (grossPay - taxAmount)
+        var taxAmount = (grossPay * tax).toFixed(2)
+        var netPay = (grossPay - taxAmount).toFixed(2)
 
-        alert(`${full} /n grosspay: ${grossPay}  /n tax Amount:${taxAmount} /n  Net Pay:${netPay}`)
+        alert(`${full} \n grosspay: ${grossPay} \n tax Amount: ${taxAmount} \n Net Pay: ${netPay}`)
 
        }//confirmData()
 
