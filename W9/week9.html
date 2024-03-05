@@ -32,15 +32,27 @@
 
 	for(let i = 0; i < people.length; i++){
 
-		var tempDiv = ``
 		var tempDiv = document.createElement(`div`)
-		tempDiv.appendChild(`div`)
-		div.setAttribute(id)
 
+		tempDiv.setAttribute(`id`,people[i])
+		tempDiv.setAttribute(`class`,`border`)
+
+		for(let key in people[i])
+		{
+
+			var p = document.createElement(`p`)
+			var text = document.createTextNode(people[i][key])
+
+			p.appendChild(text)
+            tempDiv.appendChild(p)
+
+		}
+		
+		body.appendChild(tempDiv)
 
 
 	}
-  console.log(tempDiv)
+  
 
 	
 	
